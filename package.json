@@ -1,0 +1,23 @@
+{
+  "name": "ttscalloutexample",
+  "version": "1.0.0",
+  "description": "Sinch rest api example",
+  "main": "app.js",
+  "dependencies": {
+    "sinch-request": "0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinch/nodejs-ttsCalloutExample.git"
+  },
+  "author": "Christian Jensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sinch/nodejs-ttsCalloutExample/issues"
+  },
+  "homepage": "https://github.com/sinch/nodejs-ttsCalloutExample#readme"
+}
