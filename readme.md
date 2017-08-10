@@ -1,6 +1,7 @@
 # Making Text to speech callouts with Sinch API and Node.js
 
-Today I had a customer who wanted a example of node.js code to make [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call-outs, to read more about Sinch api please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts).
+Today I had a customer who wanted a example of node.js code to make [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call-outs, to read more about Sinch API please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts). This particular customer wanted make a call out when SMS messages could not be delivered to the handset. Of course you could use this for any type of SMS that you suspect of not being delivered. Or alerts that are time sensitive like credit card alerts.
+
 
 
 ## Prerequisites 
@@ -51,3 +52,5 @@ req.end(options.data);
 
 
 
+## Next steps
+Next tutorial I will add IVR input for the another use case, credit card fraud alerts.
