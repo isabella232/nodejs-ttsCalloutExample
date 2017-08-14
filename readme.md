@@ -1,16 +1,18 @@
-# Making Text to speech callouts with Sinch API and Node.js
+# Send OTP codes with text to speech calls using Sinch and Node.js
 
-Today I had a customer who wanted a example of node.js code to make [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call-outs, to read more about Sinch API please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts). This particular customer wanted make a call out when SMS messages could not be delivered to the handset. Of course you could use this for any type of SMS that you suspect of not being delivered. Or alerts that are time sensitive like credit card alerts.
+In this tutorial I will show you how to use node.js to build a [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call that reads out pin-codes. To read more about the Sinch callout API please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts). 
 
+## Other use cases
+Common use cases for this type of call are weather- and fraud alerts, when you suspect that an SMS is not delivered. 
 
-
-## Prerequisites 
+## What you need to get started
  - Node development environment 
- - Sinch account, get one here if you don't have one [Sign up](https://sinch.com/signup) and key secret to you app. 
- - Some credits on your account, if not already verify your phone in the dashboard and my boss will give you $2 to try us out with.
+ - Application- key and secret. Get one here if you don't have one already - [Sign up](https://sinch.com/signup). 
+ - Some credits on your account. Set up your phone on the dashboard and my boss will give you $2 to get you started!
 
 ##  Code
-For this code snippet we will use our sins-request npm package to sign requests to the api. We will make a call to +15551234567, and when the users picks up tell the person "Your pinched is 1234" in US English. 
+For this code snippet I will use the [sinch-request](https://www.npmjs.com/package/sinch-request) npm package to sign the requests. This package is not required but it makes life a lot easier. 
+Below code makes a call to +15551234567 and play "Your pin code is 1234" in US English when user is answering the call.
 
 ```javascript
 var sinchRequest = require('sinch-request');
@@ -50,7 +52,7 @@ var req = https.request(options, function(response) {
 req.end(options.data);
 ```
 
-
-
 ## Next steps
-Next tutorial I will add IVR input for the another use case, credit card fraud alerts.
+
+In the next tutorial I will show you how to make IVR menus that enable you to collect input from the user.
+ 
