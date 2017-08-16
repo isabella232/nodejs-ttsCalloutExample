@@ -1,17 +1,19 @@
 # Send OTP codes with text to speech calls using Sinch and Node.js
 
-In this tutorial I will show you how to use node.js to build a [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call that reads out pin-codes. To read more about the Sinch callout API please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts). 
+![Pingcodes](https://www.sinch.com/wp-content/uploads/2017/08/pincodes-texttospeech.jpg)
+
+In this tutorial I will show you how to use node.js to build a [text to speech](https://en.wikipedia.org/wiki/Speech_synthesis) call that reads out pin-codes. To read more about the Sinch callout API please see the [documentation](https://www.sinch.com/docs/voice/rest/#Callouts).
 
 ## Other use cases
-Common use cases for this type of call are weather- and fraud alerts, when you suspect that an SMS is not delivered. 
+Common use cases for this type of call are weather- and fraud alerts, when you suspect that an SMS is not delivered.
 
 ## What you need to get started
- - Node development environment 
- - Application- key and secret. Get one here if you don't have one already - [Sign up](https://sinch.com/signup). 
+ - Node development environment
+ - Application- key and secret. Get one here if you don't have one already - [Sign up](https://sinch.com/signup).
  - Some credits on your account. Set up your phone on the dashboard and my boss will give you $2 to get you started!
 
 ##  Code
-For this code snippet I will use the [sinch-request](https://www.npmjs.com/package/sinch-request) npm package to sign the requests. This package is not required but it makes life a lot easier. 
+For this code snippet I will use the [sinch-request](https://www.npmjs.com/package/sinch-request) npm package to sign the requests. This package is not required but it makes life a lot easier.
 Below code makes a call to +15551234567 and play "Your pin code is 1234" in US English when user is answering the call.
 
 ```javascript
@@ -23,7 +25,7 @@ var creds = { key: 'your key',
 };
 
 var bodyData = JSON.stringify({ method: 'ttsCallout',
-  ttsCallout: 
+  ttsCallout:
    { destination: { type: 'number', endpoint: '+15551234567' },
      domain: 'pstn',
      custom: 'customData',
@@ -55,4 +57,3 @@ req.end(options.data);
 ## Next steps
 
 In the next tutorial I will show you how to make IVR menus that enable you to collect input from the user.
- 
